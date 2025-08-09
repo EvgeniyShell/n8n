@@ -140,7 +140,6 @@ async function buildDockerImage() {
 			--build-arg TARGETPLATFORM=${platform} \
 			-t ${config.fullImageName} \
 			-f ${config.dockerfilePath} \
-			--load \
 			${config.buildContext}`;
 
 		echo(stdout);
