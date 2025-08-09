@@ -7,7 +7,7 @@ ARG TARGETPLATFORM
 # STAGE 1: System Dependencies & Base Setup
 # ==============================================================================
 #FROM n8nio/base:${NODE_VERSION} AS system-deps
-FROM docker.io/library/n8nmy-n8n-fmbew7 AS system-deps
+FROM registry.ithlps.ru:9007/n8n AS system-deps
 
 # ==============================================================================
 # STAGE 2: Application Artifact Processor
