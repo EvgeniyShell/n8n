@@ -187,6 +187,10 @@ export const useSettingsStore = defineStore(STORES.SETTINGS, () => {
 
 	const setSettings = (newSettings: FrontendSettings) => {
 		settings.value = newSettings;
+		// === HACK: remover banner de não-produção ===
+		if (settings.value.enterprise) {
+			settings.value.enterprise.showNonProdBanner = false;
+		}
 		userManagement.value = newSettings.userManagement;
 		if (userManagement.value) {
 			userManagement.value.showSetupOnFirstLoad =
