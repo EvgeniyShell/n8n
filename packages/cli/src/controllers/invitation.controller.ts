@@ -44,9 +44,9 @@ export class InvitationController {
 		_res: Response,
 		@Body invitations: InviteUsersRequestDto,
 	) {
-		if (!invitations || invitations.length === 0) return [];
+		if (invitations.length === 0) return [];
 
-		const isWithinUsersLimit = process.env.N8N_SKIP_LICENSE_CHECK === 'true' || this.license.isWithinUsersLimit();
+		const isWithinUsersLimit = this.license.isWithinUsersLimit();
 
 		if (isSamlLicensedAndEnabled()) {
 			this.logger.debug(
