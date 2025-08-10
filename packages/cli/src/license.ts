@@ -114,6 +114,16 @@ export class License implements LicenseProvider {
 				expirySoonOffsetMins,
 			});
 
+			if (process.env.N8N_SKIP_LICENSE_CHECK === 'true') {
+				this.logger.warn('⚠️ (N8N_SKIP_LICENSE_CHECK=true)');
+				const mgr = this.manager as any;
+				mgr.hasFeatureEnabled = () => true;
+				mgr.getFeatureValue = () => Infinity;
+				mgr.getCurrentEntitlements = () => [];
+				mgr.getMainPlan = () => ({ productId: 'enterprise', planName: 'enterprise' });
+			}
+
+			
 			await this.manager.initialize();
 
 			this.logger.debug('License initialized');
@@ -218,8 +228,7 @@ export class License implements LicenseProvider {
 	}
 
 	isLicensed(feature: BooleanLicenseFeature) {
-		// return this.manager?.hasFeatureEnabled(feature) ?? false;
-		return true;
+		return this.manager?.hasFeatureEnabled(feature) ?? false;
 	}
 
 	/** @deprecated Use `LicenseState.isSharingLicensed` instead. */
