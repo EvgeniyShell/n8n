@@ -178,9 +178,11 @@ export const useSettingsStore = defineStore(STORES.SETTINGS, () => {
 	);
 
 	const permanentlyDismissedBanners = computed(() => settings.value.banners?.dismissed ?? []);
-
+	
+	// ========== my ch ==========
+	const isBelowUserQuota = computed((): boolean => true);
+	
 	const isCommunityPlan = computed(() => planName.value.toLowerCase() === 'community');
-
 	const isDevRelease = computed(() => settings.value.releaseChannel === 'dev');
 
 	const setSettings = (newSettings: FrontendSettings) => {
