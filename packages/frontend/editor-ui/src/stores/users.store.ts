@@ -112,7 +112,8 @@ export const useUsersStore = defineStore(STORES.USERS, () => {
 	});
 
 	const usersLimitNotReached = computed(
-		(): boolean => userQuota.value === -1 || userQuota.value > allUsers.value.length,
+		// (): boolean => userQuota.value === -1 || userQuota.value > allUsers.value.length,
+		(): boolean => true,
 	);
 
 	// Methods
