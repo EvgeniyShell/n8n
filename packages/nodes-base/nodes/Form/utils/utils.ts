@@ -60,6 +60,7 @@ export function sanitizeHtml(text: string) {
 			'th',
 			'tbody',
 			'thead',
+			'style',
 		],
 		allowedAttributes: {
 			table: ['style','class'],
