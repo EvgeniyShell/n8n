@@ -68,7 +68,6 @@ export function sanitizeHtml(text: string) {
 			tbody: ['style','class','id'],
 			thead: ['style','class','id'],
 			tr: ['style','class','id'],
-			td: ['style','class','id'],
 			th: ['style','class','id'],
 			td: ['style','class','id'],
 			div: ['style','class','id'],
