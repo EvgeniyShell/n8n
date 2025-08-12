@@ -1,4 +1,35 @@
 {
+	"_reusableBaseText": {
+    "cancel": "Отмена",
+    "codeNodeEditor": {
+        "linter": {
+            "useJson": "Для доступа к свойствам элемента используйте `.json`, например `item.json`"
+        },
+        "completer": {
+            "all": "Возвращает массив выходных элементов узла",
+            "first": "Возвращает первый выходной элемент узла",
+            "last": "Возвращает последний выходной элемент узла",
+            "itemMatching": "Возвращает соответствующий элемент (тот, который использовался для создания элемента в текущем узле по указанному индексу)"
+        }
+    },
+    "name": "Имя",
+    "save": "Сохранить",
+    "dismiss": "Закрыть",
+    "unlimited": "Без ограничений",
+    "activate": "Активировать",
+    "user": "Пользователь",
+    "enabled": "Активно",
+    "disabled": "Отключено"
+},
+"_reusableDynamicText": {
+    "readMore": "Подробнее",
+    "learnMore": "Узнать больше",
+    "moreInfo": "Дополнительная информация",
+    "oauth2": {
+        "clientId": "Client ID",
+        "clientSecret": "Client Secret"
+    }
+},
   "generic.annotations": "Аннотации",
   "generic.annotationData": "Выделенные данные",
   "generic.any": "Любой",
