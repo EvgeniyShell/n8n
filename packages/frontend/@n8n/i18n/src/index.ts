@@ -2,7 +2,7 @@
 import type { INodeProperties, INodePropertyCollection, INodePropertyOptions } from 'n8n-workflow';
 import { createI18n } from 'vue-i18n';
 
-import englishBaseText from './locales/en.json';
+import englishBaseText from './locales/ru.json';
 import type { BaseTextKey, INodeTranslationHeaders } from './types';
 import {
 	deriveMiddleKey,
