@@ -1,4 +1,4 @@
-import type englishBaseText from './locales/en.json';
+import type englishBaseText from './locales/ru.json';
 
 export type GetBaseTextKey<T> = T extends `_${string}` ? never : T;
 
